@@ -1,0 +1,246 @@
+:root {
+  /* --main-color: #3f51b5; */
+  --main-color: #5e6cbb;
+  --second-color: rgb(237, 44, 73);
+  --dark-gradient-background: linear-gradient(62deg, #465361 0%, #181719 100%);
+  --light-gradient-background: linear-gradient(62deg, #f8f9fa 0%, #e0e0e0 100%);
+  --text-color-for-dark-background: #fff;
+  --text-color-for-light-background: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--light-gradient-background);
+  color: var(--text-color-for-light-background);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section {
+  text-align: center;
+  max-width: 1140px;
+  margin: auto;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--text-color-for-dark-background);
+  text-decoration: none;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  height: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: 800;
+  margin-left: 30px;
+  color: var(--text-color-for-dark-background);
+}
+
+#navbar a {
+  font-size: 20px;
+  margin-right: 25px;
+  font-weight: 600;
+}
+
+@media (max-width: 550px) {
+  header {
+    flex-flow: column;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+    padding: 10px 0;
+  }
+
+  #navbar a:last-of-type {
+    margin: 0;
+  }
+
+  header .logo {
+    margin: 0;
+  }
+}
+
+#welcome-section {
+  flex-flow: column;
+  gap: 20px;
+}
+
+#welcome-section h1 {
+  font-size: 50px;
+}
+
+#welcome-section p {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--main-color);
+  font-style: italic;
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 50px 25px;
+}
+
+#projects .project {
+  width: 310px;
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 10px hsla(0, 0%, 0%, 0.349);
+  padding-bottom: 30px;
+}
+
+#projects .project .img {
+  width: 100%;
+  height: 170px;
+  border-radius: 5px 5px 0 0;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
+
+#projects .project .title {
+  font-size: 25px;
+  font-weight: 600;
+  margin: -20px 5px 0;
+}
+
+#projects .project a {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: background-color 150ms, color 150ms;
+}
+
+#projects .project a svg {
+  width: 12px;
+  height: 12px;
+}
+
+#projects .project .preview svg {
+  fill: #fff;
+}
+
+#projects .project .src-code svg {
+  fill: #000;
+}
+
+#projects .project .preview {
+  background-color: var(--second-color);
+}
+
+#projects .project .preview:hover {
+  background-color: rgb(188, 16, 42);
+}
+
+#projects .project .src-code {
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+
+}
+
+#projects .project .src-code:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+#contact {
+  flex-flow: column;
+}
+
+#contact h2 {
+  font-size: 50px;
+}
+
+#contact p {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+#contact .links {
+  gap: 30px;
+  flex-flow: row wrap;
+  margin: 50px 100px 0;
+}
+
+#contact .links a {
+  font-size: 25px;
+  text-decoration: underline;
+  color: var(--main-color);
+  transition: 150ms;
+}
+
+#contact .links a:hover {
+  color: var(--second-color);
+}
+
+.hr {
+  color: var(--main-color);
+  border: 2px solid;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+  #welcome-section h1 {
+    font-size: 35px;
+  }
+
+  #profile-link {
+    font-size: 16px;
+  }
+
+  #contact h2 {
+    font-size: 35px;
+  }
+
+  #contact .links {
+    flex-flow: column;
+  }
+}
