@@ -9,6 +9,16 @@
 </head>
 
 <body>
+
+
+  <label class="theme-toggle">
+    <input type="checkbox" id="theme-switch">
+    <span class="slider"></span>
+  </label>
+
+
+
+
   <main>
     <header>
       <p class="logo">&lt; Portfolio /&gt;</p>
@@ -166,7 +176,6 @@
     <hr class="hr">
     <footer> &#169; <span class="copyright-year"></span> Muhammad Haseep</footer>
   </main>
-  
   <script>
     const currentYear = new Date().getFullYear();
     document.querySelector(".copyright-year").innerText = currentYear;
