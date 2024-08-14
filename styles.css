@@ -53,6 +53,7 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 5px;
 }
 
 header .logo {
@@ -100,6 +101,13 @@ header .logo {
   font-weight: 300;
   color: var(--main-color);
   font-style: italic;
+}
+
+.work-section-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 #projects {

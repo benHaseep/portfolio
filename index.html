@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Muhammad Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,7 +14,7 @@
       <p class="logo">&lt; Portfolio /&gt;</p>
       <nav id="navbar" class="header">
         <a href="#welcome-section">About</a>
-        <a href="#projects">Work</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -23,6 +23,7 @@
       <p>a web developer</p>
     </section>
     <hr class="hr">
+    <h2 id="work" class="work-section-title">Some of my work</h2>
     <section id="projects" class="flex-center">
       <div class="project">
         <div class="img" style="background: url(images/project-cover-clipboard.png);"></div>
@@ -163,8 +164,13 @@
       </div>
     </section>
     <hr class="hr">
-    <footer> &#169; 2024 Muhammad Haseep</footer>
+    <footer> &#169; <span class="copyright-year"></span> Muhammad Haseep</footer>
   </main>
+  
+  <script>
+    const currentYear = new Date().getFullYear();
+    document.querySelector(".copyright-year").innerText = currentYear;
+  </script>
 </body>
 
 </html>
